@@ -1,2 +1,2 @@
-# Elastic
-About Elastic
+# ElK
+About ELK Stack
