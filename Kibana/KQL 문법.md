@@ -1,5 +1,12 @@
 ## KQL 
 
+임의의 String 값이 포함된 경우 (web-server)가 포함된
+
+```kql
+hostname : "web-server"
+```
+
+
 필드가 company이고 value가 naver 인 경우
 
 ```kql
