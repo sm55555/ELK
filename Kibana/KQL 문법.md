@@ -1,9 +1,9 @@
 ## KQL 
 
-임의의 String 값이 포함된 경우 (web-server)가 포함된
+임의의 String (hostname) 값이 포함된 경우 (*com)가 포함되고 naver.com를 제외하는 경우
 
 ```kql
-hostname : "web-server"
+hostname : *com and not hostname : naver.com
 ```
 
 
