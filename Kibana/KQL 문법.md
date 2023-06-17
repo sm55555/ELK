@@ -6,6 +6,12 @@
 hostname : *com and not hostname : naver.com
 ```
 
+반면에 Grafana Query 같은 엔진이지만 경우는 아래와 같이 써야한다.
+
+```kql
+hostname : *com && NOT hostname : "naver.com"
+```
+
 
 필드가 company이고 value가 naver 인 경우
 
