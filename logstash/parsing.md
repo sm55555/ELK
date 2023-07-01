@@ -9,7 +9,7 @@ ex )
 "Records" => {
             "eventTime" => "2023-06=30T01:49:13Z",
             "accountId" => "12312312312323",
-            .....
+            ...
             }
 
 
@@ -25,12 +25,23 @@ filter
 
   if [type] == 'iam' {
     if !("splitted" in [tags]){
-        json {
-            source => "message"
-        }
-        json {
-            source => "message"
-        }
+            json{
+                "eventTime" => "2023-06=30T01:49:13Z",        
+            }
+            split {
+                        filed => "Records"
+                        add_tag => ["splitted"]
+            }
+            date {
+                        match => [ "[Records][eventTime]", "yyyy-MM-dd'T'HH:mm:ssZ"]
+                        timezone => "Asia/Seoul"
+            }
+            mutate {
+                        rename => {
+                                    "type" "[@metadate][type]"
+                        }
+            }
+
     }
   }
 
