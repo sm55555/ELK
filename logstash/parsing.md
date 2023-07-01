@@ -61,5 +61,17 @@ filter
 
 ```
 
+아래와 같은 TimeFormat이라면 
+
+```
+2020-01-29T21:40:00.000+0000
+```
+
+```
+            date {
+                        match => [ "[Records][eventTime]", "ISO8601"]
+                        timezone => "Asia/Seoul"
+            }
+```
 
 
