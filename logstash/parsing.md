@@ -21,6 +21,20 @@ ex )
 그러기 위해 아래와 같이 filter 설정을 해주면된다.
 
 ```
+input{
+            s3{
+                        bucket => "aws-temp-s3"
+                        region => "ap-northeast-2"
+                        prefix => "AWSLogs/23213/axdzxc/us-east-1/"
+                        type => "iam"
+                        sincedb_path => "/var/lib/logstash/plugins/input/s3/iam"
+                        codec => "json"
+            }
+}
+```
+
+
+```
 filter
 
   if [type] == 'iam' {
