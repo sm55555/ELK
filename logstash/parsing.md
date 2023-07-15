@@ -20,6 +20,8 @@ ex )
 
 그러기 위해 아래와 같이 filter 설정을 해주면된다.
 
+#### 사전에 아래 S3 Bucket 주소에 GetObject, ListBucket 권한이 필요하다 !!! 
+
 ```
 input{
             s3{
