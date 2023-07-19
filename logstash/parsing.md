@@ -35,6 +35,7 @@ input{
 }
 ```
 
+### /var/lib/logstash/plugins/input/s3 하위 폴더 권한이 logstash:logstash 가 되어야한다.
 
 ```
 filter
