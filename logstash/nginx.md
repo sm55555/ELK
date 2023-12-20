@@ -1,4 +1,4 @@
-## Nginx 로그 파싱 방법,
+## Nginx 로그 파싱 방법
 
 아래와 같은 log format 존재 시
 
